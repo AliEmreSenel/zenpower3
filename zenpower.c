@@ -44,6 +44,10 @@
 #include <asm/amd_nb.h>
 #endif
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 2, 0)
+#include <asm/cpuid/api.h>
+#endif
+
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 14, 0) /* asm/amd_node.h */
 static u16 amd_pci_dev_to_node_id(struct pci_dev *pdev)
 {
