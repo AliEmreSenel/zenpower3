@@ -260,7 +260,7 @@ static unsigned int get_ccd_temp(struct zenpower_data *data, u32 ccd_addr)
 	return (regval & 0xfff) * 125 - 305000;
 }
 
-int static debug_addrs_arr[] = {
+static int debug_addrs_arr[] = {
 	F17H_M01H_SVI + 0x8, F17H_M01H_SVI + 0xC, F17H_M01H_SVI + 0x10,
 	F17H_M01H_SVI + 0x14, 0x000598BC, 0x0005994C, F17H_M70H_CCD_TEMP(0),
 	F17H_M70H_CCD_TEMP(1), F17H_M70H_CCD_TEMP(2), F17H_M70H_CCD_TEMP(3),
